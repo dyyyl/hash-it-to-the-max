@@ -4,14 +4,18 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "parcel-bundler": "^1.12.3",
     "string-hash": "^1.1.3"
   },
-  "scripts": {
-    "dev": "parcel babel index.html"
-  },
   "devDependencies": {
+    "@babel/cli": "^7.4.3",
     "@babel/core": "^7.4.3",
-    "@babel/preset-env": "^7.4.3"
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.4.3",
+    "eslint": "^5.16.0",
+    "eslint-plugin-node": "^8.0.1"
+  },
+  "scripts": {
+    "dev": "babel-node index.js",
+    "hash": "babel-node ./code/hashmap.js"
   }
 }

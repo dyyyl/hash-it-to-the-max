@@ -7,7 +7,7 @@ class FunMap {
 
   get(element) {
     const value = this.list[hash(element)]; // CHANGE
-    return value || "this ain't it, sis 💁🏽‍♂️"; // CHANGE
+    return value || "this ain't it, sis 💁"; // CHANGE
   }
 
   set(key, value) {
