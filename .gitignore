@@ -2,6 +2,7 @@
 
 # dependencies
 /node_modules
+/FunMap/node_modules
 /.pnp
 .pnp.js
 
@@ -10,6 +11,8 @@
 
 # production
 /build
+/FunMap/.cache
+/FunMap/dist
 
 # misc
 .DS_Store

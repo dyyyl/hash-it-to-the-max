@@ -1,0 +1,10 @@
+{
+  "extends": ["eslint:recommended"],
+  "rules": {
+    "no-console": 0,
+    "no-plusplus": 0
+  },
+  "parserOptions": {
+    "sourceType": "module"
+  }
+}

@@ -100,7 +100,7 @@ Well, right now when we try to find something in our map, we're looking for the 
 
 ```javascript
 // ADD THIS
-import hash = from 'string-hash';
+import hash from 'string-hash';
 
 class FunMap {
   constructor() {
@@ -108,7 +108,7 @@ class FunMap {
   }
 
   get(element) {
-    const value = this.list[hash(x)]; // CHANGE
+    const value = this.list[hash(element)]; // CHANGE
     return value ? value : "this ain't it, sis 💁🏽‍♂️"; // CHANGE
   }
 
