@@ -38,6 +38,9 @@ The average computational complexity of search, insert, and delete actions in a 
 
 So, in order to best understand the inner workings of a hashmap, let's build one!
 
+Instead of cheating and using a JavaScript Object or the Map implementation, we're going
+to build off of an associative array (because JavaScript Arrays can be dynamically resized).
+
 In Console:
 
 ```javascript
@@ -119,3 +122,70 @@ class FunMap {
 
 // same tests 😅
 ```
+
+Hashing is the secret sauce in our hashmap that makes them run so incredibly fast, but picking
+a good hashing function is just as important during implementation. We're using `string-hash`
+due to that fact that it iterates over a string backwards during the hash function (which is faster
+than iterating forward, for some reason), and because it uses the XOR operator instead of the
+addition operator (obviating the need for modular arithmetic in JavaScript).
+
+Now everyone is thinking - "okay Dylan, this is super cool, but what happens if two strings happen
+to produce the same hash?"
+
+Yeah, right - fair point, hash collisions are pretty much mathematically inevitable, on a long
+enough timeline (Google was able to produce collisions for SHA-1 back in 2017!).
+
+In order to protect against hash collisions, we can implement a number of contingencies including
+double hashing (running the data into yet another calculation to get another spot in the map), or
+you could just find an empty spot close to where the hash would have been (this is called linear probing).
+
+For our implementation, we're just going to allow for multiple key/value pairs to live in the same
+index at once.
+
+```javascript
+import hash from 'string-hash';
+
+class FunMap {
+  constructor() {
+    this.list = [];
+  }
+
+  get(element) {
+    // CHANGE EVERYTHING
+    const hashKey = hash(element);
+
+    if (!this.list[hashKey]) {
+      return undefined;
+    }
+
+    const value = this.list[hashKey].find(pair => pair[0] === element);
+    return value[1];
+  }
+
+  set(key, value) {
+    // CHANGE EVERYTHING
+    const hashKey = hash(key);
+
+    if (!this.list[hashKey]) this.list[hashKey] = [];
+
+    this.list[hashKey].push([key, value]);
+  }
+}
+```
+
+We implemented a system here called `seperate chaining`, storing all the key-pairs that
+generate collisions in a list and looping through them.
+
+This is an incredibly naive approach to preventing damage from collisions, however.
+The reason we have a high degree of confidence in achieving O(1) as an average complexity
+in this case has more to do with the hashing algorithm we're working with, and complexity
+here is generally going to accrue as collisions happen more and more often.
+
+Implementations with a lot of collisions will tend toward O(n), while implementations
+with few (or no) collisions will tend toward O(1)!
+
+As I mentioned earlier, there are other methods that can be implemented including:
+
+1. Double hashing (which can be more computationally expensive).
+2. Open Addressing (aka linear probing), which works pretty well unless you have
+   a lot of collisions, at which point you begin to tend towards O(n)

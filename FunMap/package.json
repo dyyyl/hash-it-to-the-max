@@ -16,6 +16,7 @@
   },
   "scripts": {
     "dev": "babel-node index.js",
-    "hash": "babel-node ./code/hashmap.js"
+    "hash": "babel-node ./code/hashmap.js",
+    "collisions": "babel-node ./code/collisions.js"
   }
 }
