@@ -55,7 +55,7 @@ class FunMap {
   get(element) {
     const value = this.list.find(pair => pair[0] === element);
     // light error handling
-    return value ? value[1] : "this ain't it, sis 💁🏽‍♂️";
+    return value ? value[1] : "this ain't it, sis 💁";
   }
 
   //  setter adds key/value pair into memory
@@ -112,7 +112,7 @@ class FunMap {
 
   get(element) {
     const value = this.list[hash(element)]; // CHANGE
-    return value ? value : "this ain't it, sis 💁🏽‍♂️"; // CHANGE
+    return value ? value : "this ain't it, sis 💁"; // CHANGE
   }
 
   set(key, value) {
