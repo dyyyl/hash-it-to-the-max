@@ -15,10 +15,12 @@ const GoForward = () => {
     </>
   ) : (
     <>
-      <Navigation role="img" aria-label="go forward" onClick={() => setRoute(route + 1)}>
-        {/* eslint-disable-next-line */}
-        <Link to={`/${(route + 1).toString()}`}>👉🏽</Link>
-      </Navigation>
+      <Link to={`/${(route + 1).toString()}`}>
+        <Navigation role="img" aria-label="go forward" onClick={() => setRoute(route + 1)}>
+          {/* eslint-disable-next-line */}
+          👉🏽
+        </Navigation>
+      </Link>
     </>
   );
 };
