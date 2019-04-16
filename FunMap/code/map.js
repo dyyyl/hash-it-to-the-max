@@ -21,11 +21,13 @@ class FunMap {
 const map = new FunMap();
 
 // 🌈 TEST ONE 🦄
+console.log('🌈 TEST ONE 🦄');
 map.set('🦄', 5);
 console.log(map.get('🦄'));
 console.log(map.get('🌈'));
 
 // 🌈 TEST TWO 🦄
+console.log('🌈 TEST TWO 🦄');
 map.set('🦄', 5);
 map.set('🌈', 7);
 
@@ -34,6 +36,7 @@ map.get('💃🏽');
 console.timeEnd('with like two records in the map');
 
 // 🌈 TEST THREE 🦄
+console.log('🌈 TEST THREE 🦄');
 console.time('time to set records');
 for (let i = 0; i < 1000000; i++) {
   map.set(`element${i}`, i);
