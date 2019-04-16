@@ -10,38 +10,35 @@ import GoForward from '../Components/GoForward';
 import Container from '../../shared/styles/Container';
 import Layout from '../../shared/styles/Layout';
 
-// Images
-import timeSpace from '../../shared/images/time-space.png';
-
 const Second = () => {
   const [show, setShow] = useState(false);
 
   const transitions = useTransition(show, null, {
-    from: { position: 'absolute', opacity: 0 },
+    from: { position: 'relative', opacity: 0 },
     enter: { opacity: 1 },
   });
 
   setTimeout(() => {
     setShow(true);
-  }, 1000);
+  }, 2000);
 
   return (
     <Layout>
       <GoBack />
       <Container style={{ justifyContent: 'center' }}>
-        <h1 style={{ alignSelf: 'flex-end' }}>🔥 WHAT IS IT GOOD FOR? 🔥</h1>
-        <div style={{ paddingTop: '10rem' }}>
+        <h1 style={{ alignSelf: 'flex-end' }}>🔥 WHAT IS A HASHMAP? 🔥</h1>
+        <div
+          style={{
+            width: '100%',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}
+        >
           {transitions.map(
             ({ item, key, props }) => item && (
             <animated.div key={key} style={props}>
-              <img
-                src={timeSpace}
-                alt="Time & Space Complexity"
-                style={{
-                  height: '55%',
-                  width: '55%',
-                }}
-              />
+              <div style={{ fontSize: '25rem', marginBottom: '25rem' }}>{'{ }'}</div>
             </animated.div>
             ),
           )}

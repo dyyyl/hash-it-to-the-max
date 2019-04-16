@@ -9,17 +9,19 @@ import GoForward from '../Components/GoForward';
 import Container from '../../shared/styles/Container';
 import Layout from '../../shared/styles/Layout';
 
-import entries from '../../shared/images/entries.png';
+import collisions from '../../shared/images/carbon/collisions.png';
 
-const First = () => (
+const Eighth = () => (
   <Layout>
     <GoBack />
     <Container>
-      <h1 style={{ alignSelf: 'flex-end', justifySelf: 'center' }}>🔥 Enter, entries 🔥</h1>
+      <h1 style={{ alignSelf: 'flex-end', justifySelf: 'center' }}>
+        🔥 CERN's got nothin' on this 🔥
+      </h1>
       <img
-        src={entries}
+        src={collisions}
         style={{
-          height: '55rem',
+          height: '65rem',
           width: '75rem',
           justifySelf: 'center',
           marginTop: '5rem',
@@ -31,4 +33,4 @@ const First = () => (
   </Layout>
 );
 
-export default First;
+export default Eighth;

@@ -9,17 +9,17 @@ import GoForward from '../Components/GoForward';
 import Container from '../../shared/styles/Container';
 import Layout from '../../shared/styles/Layout';
 
-import entries from '../../shared/images/entries.png';
+import map from '../../shared/images/carbon/map.png';
 
-const First = () => (
+const Fifth = () => (
   <Layout>
     <GoBack />
     <Container>
-      <h1 style={{ alignSelf: 'flex-end', justifySelf: 'center' }}>🔥 Enter, entries 🔥</h1>
+      <h1 style={{ alignSelf: 'flex-end', justifySelf: 'center' }}>🔥 Map Time 🔥</h1>
       <img
-        src={entries}
+        src={map}
         style={{
-          height: '55rem',
+          height: '65rem',
           width: '75rem',
           justifySelf: 'center',
           marginTop: '5rem',
@@ -31,4 +31,4 @@ const First = () => (
   </Layout>
 );
 
-export default First;
+export default Fifth;

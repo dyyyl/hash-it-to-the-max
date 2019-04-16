@@ -9,17 +9,17 @@ import GoForward from '../Components/GoForward';
 import Container from '../../shared/styles/Container';
 import Layout from '../../shared/styles/Layout';
 
-import entries from '../../shared/images/entries.png';
+import hashmap from '../../shared/images/carbon/hashmap.png';
 
-const First = () => (
+const Sixth = () => (
   <Layout>
     <GoBack />
     <Container>
-      <h1 style={{ alignSelf: 'flex-end', justifySelf: 'center' }}>🔥 Enter, entries 🔥</h1>
+      <h1 style={{ alignSelf: 'flex-end', justifySelf: 'center' }}>🔥 Hash It 🔥</h1>
       <img
-        src={entries}
+        src={hashmap}
         style={{
-          height: '55rem',
+          height: '65rem',
           width: '75rem',
           justifySelf: 'center',
           marginTop: '5rem',
@@ -31,4 +31,4 @@ const First = () => (
   </Layout>
 );
 
-export default First;
+export default Sixth;

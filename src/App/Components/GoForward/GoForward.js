@@ -6,7 +6,14 @@ import Navigation from '../../../shared/styles/Navigation';
 
 const GoForward = () => {
   const { route, setRoute } = useContext(RouteContext);
-  return (
+  return route === 8 ? (
+    <>
+      {/* eslint-disable-next-line */}
+      <Navigation role="img" aria-label="go home, it's over">
+        🛑
+      </Navigation>
+    </>
+  ) : (
     <>
       <Navigation role="img" aria-label="go forward" onClick={() => setRoute(route + 1)}>
         {/* eslint-disable-next-line */}
