@@ -1,6 +1,6 @@
 Hey, my name's Dyl and this is a presentation on Hashmaps!
 
-I made a website, so y'all can follow along at: site.netlify.blah
+I made a website, so y'all can follow along at: hash-it-to-the-max.netlify.com
 
 No cheating and looking ahead!
 
