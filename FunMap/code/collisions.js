@@ -9,7 +9,7 @@ class FunMap {
     const hashKey = hash(element);
 
     if (!this.list[hashKey]) {
-      return undefined;
+      return "this ain't it, sis 💁";
     }
 
     const value = this.list[hashKey].find(pair => pair[0] === element);
