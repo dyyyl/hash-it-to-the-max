@@ -8,12 +8,10 @@ const GoBack = () => {
   const { route, setRoute } = useContext(RouteContext);
 
   return route !== 0 ? (
-    <Link to={`/${(route - 1).toString()}`}>
-      <Navigation role="img" aria-label="go back" onClick={() => setRoute(route - 1)}>
-        {/* eslint-disable-next-line */}
-        👈🏽
-      </Navigation>
-    </Link>
+    <Navigation role="img" aria-label="go back" onClick={() => setRoute(route - 1)}>
+      {/* eslint-disable-next-line */}
+      <Link to={`/${(route - 1).toString()}`}>👈🏽</Link>
+    </Navigation>
   ) : (
     <>
       {/* eslint-disable-next-line */}
