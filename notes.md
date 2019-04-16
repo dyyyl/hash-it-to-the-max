@@ -178,7 +178,7 @@ class FunMap {
 ```
 
 Hashing is the secret sauce in our hashmap that makes them run so incredibly
-fast, but picking a good hashing function is just as important during
+fast, but picking a good hashing function is incredibly important during
 implementation. We're using `string-hash` due to that fact that it iterates over
 a string backwards during the hash function (which is faster than iterating
 forward, for some reason), and because it uses the XOR operator instead of the
@@ -216,7 +216,7 @@ class FunMap {
     const hashKey = hash(element);
 
     if (!this.list[hashKey]) {
-      return undefined;
+      return "this ain't it, sis 💁";
     }
 
     const value = this.list[hashKey].find(pair => pair[0] === element);
