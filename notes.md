@@ -4,8 +4,8 @@ I made a website, so y'all can follow along at: hash-it-to-the-max.netlify.com
 
 No cheating and looking ahead!
 
-Let's assume you came to own a small, independent bookshop, and want to fill up
-with books. You don't want to put any book any where - you want to be able
+Let's assume you came to own a small, independent bookshop, and want to fill it
+up with books. You don't want to put any book any where - you want to be able
 to easily find them again when you need them.
 
 You happen to be a very clever programmer, so instead of sorting alphabetically,
@@ -240,17 +240,17 @@ key-pairs that generate collisions in a list and looping through them.
 This is an incredibly naive approach to preventing damage from collisions,
 however. The reason we have a high degree of confidence in achieving O(1) as an
 average complexity in this case has more to do with the hashing algorithm we're
-working with, and complexity is generally going to accrue as collisions happen
-more and more often.
+working with than our current implementation, and complexity is generally going
+to accrue as collisions happen more and more often.
 
 Implementations with a lot of collisions will tend toward O(n), while
 implementations with few (or no) collisions will tend toward O(1)!
 
-As I mentioned earlier, there are other methods that can be implemented
-including:
+As I mentioned earlier, there are other methods to avoid collisions that can be
+implemented including:
 
 1. Double hashing (which can be more computationally expensive).
 2. Open Addressing (aka linear probing), which works pretty well unless you have
-   a lot of collisions, at which point you begin to tend towards O(n)
+   a lot of collisions, at which point you begin to tend towards O(n) again.
 
 Thank you all so much!
